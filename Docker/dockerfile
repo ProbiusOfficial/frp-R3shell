@@ -1,0 +1,14 @@
+FROM alpine:latest
+
+WORKDIR /app
+
+COPY frpc /app/frpc
+COPY start.sh /app/start.sh
+
+RUN apk add --no-cache bash
+
+RUN chmod +x /app/start.sh
+
+ENV FRPC_KEY_ID ""
+
+CMD ["/app/start.sh"]
