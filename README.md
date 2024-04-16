@@ -23,7 +23,7 @@ docker run -it -e FRPC_KEY_ID="key:id" probius/r3shell:latest
 在 config 中填入 key 和 id，然后运行 main.ps1
 
 ```powershell
-./main.ps1 -key "key" -id "id"
+./main.ps1
 ```
 
 ![ps1_demo](./Windows/ps1_demo.gif)
