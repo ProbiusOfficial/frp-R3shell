@@ -10,7 +10,7 @@ reverse-shell in SakuraFrp.
 
 记录下你的 Key 和 隧道ID，Like this: `key:id`
 
-### Docker
+### 【推荐】Docker
 
 ```bash
 docker run -it -e FRPC_KEY_ID="key:id" probius/r3shell:latest
@@ -18,9 +18,32 @@ docker run -it -e FRPC_KEY_ID="key:id" probius/r3shell:latest
 
 ![Demo](./Docker/Demo.gif)
 
+### Linux
+
+请先根据 https://doc.natfrp.com/frpc/usage.html 中的说明下载对应系统架构的frpc文件。（默认为 Linux 64 位 - amd64 版本）
+
+然后将下载的二进制文件 改名为 frpc 和 .sh 脚本放置在同目录下。
+
+使用 export FRPC_KEY_ID=key:id 设置你账户的密钥信息。
+
+```bash
+export FRPC_KEY_ID=key:id
+#.Eg export FRPC_KEY_ID=qs1mo0bkewe9ysu8q5p8ydmpincfq137:114514
+```
+
+然后运行脚本即可。
+
+```bash
+./start.sh
+```
+
+![Demo_Linux](./Linux/Demo_Linux.gif)
+
 ### Windows
 
 在 config 中填入 key 和 id，然后运行 main.ps1
+
+(如果是其他架构，请替换对应的 .exe 程序并修改.ps1中的程序指向，默认AMD64)
 
 ```powershell
 ./main.ps1 -key "key" -id "id"
