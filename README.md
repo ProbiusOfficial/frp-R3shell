@@ -46,7 +46,7 @@ export FRPC_KEY_ID=key:id
 (如果是其他架构，请替换对应的 .exe 程序并修改.ps1中的程序指向，默认AMD64)
 
 ```powershell
-./main.ps1 -key "key" -id "id"
+./main.ps1
 ```
 
 ![ps1_demo](./Windows/ps1_demo.gif)
